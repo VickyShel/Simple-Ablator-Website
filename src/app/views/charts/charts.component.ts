@@ -109,9 +109,9 @@ export class ChartsComponent{
     const options = { headers, withCredentials: false};
     // 发送POST请求，将FormData传递给后端
     // // @ts-ignore
-    // this.httpClient.post('https://simple-ablator-website-backend.uc.r.appspot.com/upload',formData).subscribe(
+    this.httpClient.post('https://simple-ablator-website-backend.uc.r.appspot.com/upload',formData).subscribe(
     // @ts-ignore
-    this.httpClient.post('http://localhost:5500/upload',formData).subscribe(
+    // this.httpClient.post('http://localhost:5500/upload',formData).subscribe(
       (res) => {
         // @ts-ignore
         const response=res[0]
