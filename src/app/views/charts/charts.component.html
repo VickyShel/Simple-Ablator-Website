@@ -1,0 +1,36 @@
+<div class="filepond-wrapper">
+  <input type="file" class="filepond"
+         (change)="onFilePondFileAdded($event)">
+  <button (click)="uploadFile()" >Upload</button>
+</div>
+
+<!--<c-row>-->
+<!--  <c-card class="mb-4">-->
+<!--    <file-pond-->
+<!--      #myPond-->
+<!--      (oninit)="pondHandleInit()"-->
+<!--      (onaddfile)="pondHandleAddFile($event)"-->
+<!--      (onactivatefile)="pondHandleActivateFile($event)"-->
+<!--    >-->
+<!--    </file-pond>-->
+<!--  </c-card>-->
+<!--</c-row>-->
+  <c-row *ngFor="let chart of charts_bind ;let i = index">
+    <c-card class="mb-4">
+      <c-card-header>
+        {{labels[i]}}
+      </c-card-header>
+      <c-card-body>
+        <c-chart type="line" [data]="chart"></c-chart>
+      </c-card-body>
+    </c-card>
+<!--    <c-col xs="12">-->
+<!--      <app-docs-callout href="charts">-->
+<!--        Angular wrapper component for Chart.js 3.6, the most popular charting library.-->
+<!--        <br>-->
+<!--      </app-docs-callout>-->
+<!--    </c-col>-->
+
+  </c-row>
+
+<!--<button (click)="onFilePondUpload()">Upload</button>-->
